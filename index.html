@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thibaut Plassot Sansans</title>
+  <meta name="description" content="Thibaut Plassot Sansans — PhD candidate in Development Economics at the Bordeaux School of Economics (University of Bordeaux – CNRS). Research on inequality of opportunity, social mobility, middle classes and territorial inequality in Latin America.">
+  <meta name="author" content="Thibaut Plassot Sansans">
+  <link rel="canonical" href="https://thib336.github.io/">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Thibaut Plassot Sansans",
+    "url": "https://thib336.github.io/",
+    "jobTitle": "PhD Candidate in Development Economics",
+    "worksFor": { "@type": "Organization", "name": "Bordeaux School of Economics, University of Bordeaux" },
+    "knowsAbout": ["Development economics", "Inequality of opportunity", "Social mobility", "Middle classes", "Territorial inequality", "Latin America", "Mexico"],
+    "sameAs": [
+      "https://scholar.google.com/citations?user=swcCBwgAAAAJ",
+      "https://orcid.org/0000-0002-5652-3279",
+      "https://www.linkedin.com/in/thibaut-plassot-69a41362/",
+      "https://github.com/Thib336",
+      "https://x.com/Thib_Plassot",
+      "https://www.researchgate.net/profile/Thibaut-Plassot"
+    ]
+  }
+  </script>
+
+  <style>
+    :root {
+      --text: #22211f;
+      --muted: #6b665f;
+      --accent: #1f5f8b;
+      --accent-dark: #174a6d;
+      --rule: #e6e0d6;
+      --bg: #f9f7f3;
+      --card: #fffdf9;
+      --chip: #e4edf4;
+      --chip-hover: #d3e2ee;
+      --serif: 'Source Serif 4', Georgia, 'Times New Roman', serif;
+      --sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: var(--sans);
+      font-size: 16px;
+      line-height: 1.65;
+      background: var(--bg);
+      color: var(--text);
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* ---------- Navigation ---------- */
+    .navbar {
+      background: rgba(249, 247, 243, 0.88);
+      backdrop-filter: saturate(180%) blur(10px);
+      -webkit-backdrop-filter: saturate(180%) blur(10px);
+      border-bottom: 1px solid var(--rule);
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
+    .navbar-top {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0.85rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    .brand {
+      font-family: var(--serif);
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: var(--text);
+      letter-spacing: -0.01em;
+    }
+    .brand:hover { text-decoration: none; color: var(--accent); }
+    .nav-links { display: flex; gap: 1.5rem; }
+    .nav-links a {
+      color: var(--muted);
+      font-size: 0.88rem;
+      font-weight: 500;
+      transition: color 0.15s ease;
+    }
+    .nav-links a:hover { color: var(--accent); text-decoration: none; }
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      color: var(--text);
+      font-size: 1.3rem;
+      cursor: pointer;
+      padding: 0.25rem;
+    }
+
+    /* ---------- Layout ---------- */
+    main { max-width: 960px; margin: 0 auto; padding: 2.5rem 1.5rem 1rem; }
+    section { margin-bottom: 3.5rem; scroll-margin-top: 4.5rem; }
+
+    h1 {
+      font-family: var(--serif);
+      font-size: 2rem;
+      margin: 0 0 0.25rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+    }
+    h2 {
+      font-family: var(--sans);
+      font-size: 0.95rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent);
+      margin: 0 0 1.5rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid var(--accent);
+      display: inline-block;
+    }
+    h3 {
+      font-family: var(--serif);
+      font-size: 1.3rem;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+      margin: 2rem 0 0.9rem;
+    }
+    h3:first-of-type { margin-top: 0.5rem; }
+    p { margin: 0 0 1rem; }
+
+    /* ---------- Home card ---------- */
+    #home {
+      display: flex;
+      gap: 2.5rem;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      background: var(--card);
+      border: 1px solid var(--rule);
+      border-radius: 16px;
+      padding: 2.25rem;
+      box-shadow: 0 6px 24px rgba(60, 50, 40, 0.06);
+    }
+    #home .photo { text-align: center; flex: 0 0 200px; }
+    #home .photo img {
+      width: 180px;
+      height: 180px;
+      object-fit: cover;
+      object-position: top;
+      border-radius: 50%;
+      display: block;
+      margin: 0 auto 1.1rem;
+      box-shadow: 0 4px 18px rgba(60, 50, 40, 0.18);
+      border: 3px solid var(--card);
+      outline: 2px solid var(--accent);
+    }
+    #home .intro { flex: 1 1 380px; }
+    #home .intro p { font-family: var(--serif); font-size: 1.08rem; line-height: 1.7; }
+    .affiliation { color: var(--muted); margin: 0 0 0.2rem; font-size: 0.98rem; }
+    .buttons { display: flex; gap: 0.6rem; flex-wrap: wrap; margin: 1rem 0 1.25rem; }
+    .btn {
+      display: inline-block;
+      font-size: 0.85rem;
+      font-weight: 600;
+      padding: 0.5rem 1.05rem;
+      border-radius: 8px;
+      transition: background 0.15s ease, transform 0.15s ease;
+    }
+    .btn-primary { background: var(--accent); color: #fff; }
+    .btn-primary:hover { background: var(--accent-dark); text-decoration: none; transform: translateY(-1px); }
+    .btn-secondary { background: var(--chip); color: var(--accent-dark); }
+    .btn-secondary:hover { background: var(--chip-hover); text-decoration: none; transform: translateY(-1px); }
+
+    .social {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 0.9rem;
+      flex-wrap: wrap;
+    }
+    .social a { color: var(--muted); transition: color 0.15s ease; font-size: 1.15rem; }
+    .social a:hover { color: var(--accent); }
+    .social .gs-icon { width: 1.15rem; height: 1.15rem; vertical-align: -0.15rem; }
+
+    .fields { display: flex; flex-wrap: wrap; gap: 0.45rem; margin: 0.5rem 0 0; }
+    .fields span {
+      font-size: 0.78rem;
+      font-weight: 500;
+      background: var(--chip);
+      color: var(--accent-dark);
+      padding: 0.2rem 0.7rem;
+      border-radius: 999px;
+    }
+
+    /* ---------- Lists ---------- */
+    ul { padding-left: 1.2rem; margin: 0 0 1rem; }
+    li { margin-bottom: 0.85rem; }
+
+    ul.dated { list-style: none; padding-left: 0; }
+    ul.dated li {
+      display: grid;
+      grid-template-columns: 5.2rem 1fr;
+      gap: 0.75rem;
+      margin-bottom: 1rem;
+    }
+    ul.dated .year {
+      color: var(--muted);
+      font-variant-numeric: tabular-nums;
+      font-size: 0.9rem;
+      padding-top: 0.15rem;
+      white-space: nowrap;
+    }
+    ul.dated .title { font-weight: 600; }
+    ul.dated .authors { color: var(--muted); font-size: 0.93rem; }
+    ul.dated .venue { display: block; font-size: 0.93rem; color: var(--muted); }
+    ul.dated .venue em { color: var(--text); }
+
+    .paper-link {
+      display: inline-block;
+      font-size: 0.7rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: var(--accent-dark);
+      background: var(--chip);
+      padding: 0.1rem 0.55rem;
+      border-radius: 999px;
+      white-space: nowrap;
+      vertical-align: middle;
+      margin-left: 0.3rem;
+      transition: background 0.15s ease;
+    }
+    .paper-link:hover { background: var(--chip-hover); text-decoration: none; }
+
+    .compact li { margin-bottom: 0.5rem; }
+    .inline-list { color: var(--text); }
+
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+
+    dl.contact { margin: 0; }
+    dl.contact dt { font-weight: 600; margin-top: 0.8rem; }
+    dl.contact dd { margin: 0.1rem 0 0; color: var(--muted); }
+
+    footer {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 1.5rem 1.5rem 3rem;
+      color: var(--muted);
+      font-size: 0.85rem;
+      border-top: 1px solid var(--rule);
+      text-align: center;
+    }
+
+    /* ---------- Responsive ---------- */
+    @media (max-width: 720px) {
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        gap: 0.9rem;
+        padding: 0.5rem 0 0.75rem;
+      }
+      .nav-links.open { display: flex; }
+      .menu-toggle { display: block; }
+      #home { padding: 1.5rem; gap: 1.5rem; }
+      #home .photo { flex: 1 1 100%; }
+      ul.dated li { grid-template-columns: 1fr; gap: 0.1rem; }
+      .two-col { grid-template-columns: 1fr; }
+    }
+
+    @media print {
+      .navbar, .buttons, .menu-toggle { display: none; }
+      body { background: #fff; }
+      #home { box-shadow: none; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navbar-top">
+      <a class="brand" href="#home">Thibaut Plassot Sansans</a>
+      <div class="nav-links" id="navLinks">
+        <a href="#home">About</a>
+        <a href="#research">Research</a>
+        <a href="#talks">Talks</a>
+        <a href="#teaching">Teaching</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <button class="menu-toggle" id="menuToggle" aria-label="Menu" aria-expanded="false">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </nav>
+
+  <main>
+    <!-- ================= HOME ================= -->
+    <section id="home">
+      <div class="photo">
+        <img src="photo.jpg" alt="Thibaut Plassot Sansans">
+      </div>
+
+      <div class="intro">
+        <h1>Thibaut Plassot Sansans</h1>
+        <p class="affiliation">PhD Candidate in Development Economics<br>
+          <a href="https://www.bse.u-bordeaux.fr/">Bordeaux School of Economics</a>, University of Bordeaux – CNRS</p>
+
+        <div class="buttons">
+          <a class="btn btn-primary" href="Resume_Plassot.pdf" target="_blank">Curriculum Vitae</a>
+          <a class="btn btn-secondary" href="Publication_List.pdf" target="_blank">Publication list</a>
+        </div>
+
+        <div class="social">
+          <a href="mailto:thibaut.plassot-sansans@u-bordeaux.fr" aria-label="Email" title="Email"><i class="fas fa-envelope"></i></a>
+          <a href="https://scholar.google.com/citations?user=swcCBwgAAAAJ" target="_blank" aria-label="Google Scholar" title="Google Scholar"><svg class="gs-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z"/></svg></a>
+          <a href="https://orcid.org/0000-0002-5652-3279" target="_blank" aria-label="ORCID" title="ORCID"><i class="fab fa-orcid"></i></a>
+          <a href="https://www.researchgate.net/profile/Thibaut-Plassot" target="_blank" aria-label="ResearchGate" title="ResearchGate"><i class="fab fa-researchgate"></i></a>
+          <a href="https://www.linkedin.com/in/thibaut-plassot-69a41362/" target="_blank" aria-label="LinkedIn" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+          <a href="https://github.com/Thib336" target="_blank" aria-label="GitHub" title="GitHub"><i class="fab fa-github"></i></a>
+          <a href="https://x.com/Thib_Plassot" target="_blank" aria-label="X (Twitter)" title="X (Twitter)"><i class="fab fa-x-twitter"></i></a>
+        </div>
+
+        <p style="margin-top:1.4rem">Welcome to my website!</p>
+        <p>I am a PhD candidate in Development Economics at the Bordeaux School of Economics (University of Bordeaux – CNRS), within the HOPE project, under the supervision of Matthieu Clément and Éric Rougier. My thesis, <em>Peripheral Middle Classes in Latin America: identification, behaviours, perceptions and aspirations</em>, combines the territorial and the social-class dimensions to analyse their joint influence on social mobility, inequality, educational aspirations and expectations, perceptions of insecurity and political behaviour.</p>
+        <p>Before starting my PhD, I spent ten years in Mexico: first at CONEVAL, the National Council for the Evaluation of Social Development Policy, where I headed the department in charge of designing instruments for the study of poverty, and then at Universidad Iberoamericana, in the Research Chair on Territorial Dynamics and Well-being. In 2025 I was a Fulbright Visiting Scholar at the Stone Center on Socio-Economic Inequality, City University of New York.</p>
+        <p>My work combines microeconometrics, machine-learning methods and survey design to study inequality of opportunity, social mobility, poverty and socio-territorial disparities.</p>
+
+        <div class="fields">
+          <span>Development Economics</span>
+          <span>Inequality of Opportunity</span>
+          <span>Social Mobility</span>
+          <span>Middle Classes</span>
+          <span>Regional &amp; Spatial Economics</span>
+          <span>Agrifood Systems</span>
+          <span>Latin America</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= RESEARCH ================= -->
+    <section id="research">
+      <h2>Research</h2>
+
+      <h3>Peer-reviewed publications</h3>
+      <ul class="dated">
+        <li>
+          <span class="year">2026</span>
+          <div>
+            <span class="title">Who Reaches the Middle Class in Mexico? Social Mobility and Territorial Inequality Beyond the Rural–Urban Divide</span>
+            <a class="paper-link" href="https://doi.org/10.48102/rsm.v1i14.190" target="_blank">Paper</a><br>
+            <span class="authors">with Roberto Vélez Grajales</span>
+            <span class="venue"><em>Sobre México. Temas de Economía</em>, 1(14), 38–82</span>
+          </div>
+        </li>
+        <li>
+          <span class="year">2025</span>
+          <div>
+            <span class="title">Bridging the Gap: Educational Aspirations and Expectations in Latin American Intermediate Territories</span>
+            <a class="paper-link" href="https://doi.org/10.1080/03054985.2025.2468207" target="_blank">Paper</a><br>
+            <span class="authors">with Isidro Soloaga, Chiara Cazzuffi and Cristian Leyton</span>
+            <span class="venue"><em>Oxford Review of Education</em>, 52(3), 385–403</span>
+          </div>
+        </li>
+        <li>
+          <span class="year">2025</span>
+          <div>
+            <span class="title">A Common Framework to Analyze Social Mobility and Inequality of Opportunity. An Application to the Core and Peripheral Areas of Chile, Colombia, and Mexico</span>
+            <a class="paper-link" href="https://doi.org/10.1080/00220388.2025.2451867" target="_blank">Paper</a><br>
+            <span class="authors">with Isidro Soloaga and Chiara Cazzuffi</span>
+            <span class="venue"><em>The Journal of Development Studies</em>, 61(7), 1110–1125</span>
+          </div>
+        </li>
+        <li>
+          <span class="year">2024</span>
+          <div>
+            <span class="title">Food Prices and Income Poverty in Mexico: Regional Estimates</span>
+            <a class="paper-link" href="https://doi.org/10.18381/eq.v21i1.731" target="_blank">Paper</a><br>
+            <span class="authors">with Isidro Soloaga</span>
+            <span class="venue"><em>EconoQuantum</em>, 21(1), 1–38</span>
+          </div>
+        </li>
+        <li>
+          <span class="year">2022</span>
+          <div>
+            <span class="title">Inequality of Opportunity in Mexico and its Regions: A Data-Driven Approach</span>
+            <a class="paper-link" href="https://doi.org/10.1080/00220388.2022.2055465" target="_blank">Paper</a><br>
+            <span class="authors">with Isidro Soloaga and Pedro Torres</span>
+            <span class="venue"><em>The Journal of Development Studies</em>, 58(9), 1857–1873</span>
+          </div>
+        </li>
+        <li>
+          <span class="year">2021</span>
+          <div>
+            <span class="title">Ocupación de jóvenes en México entre 1992 y 2018: estudiar, trabajar, ambos o ninguno</span>
+            <a class="paper-link" href="https://doi.org/10.48102/rsm.vi4.101" target="_blank">Paper</a><br>
+            <span class="authors">with Rodrigo Carillo</span>
+            <span class="venue"><em>Sobre México. Temas de Economía</em>, (4), 39–83</span>
+          </div>
+        </li>
+        <li>
+          <span class="year">2019</span>
+          <div>
+            <span class="title">Transformaciones en los ingresos de los hogares mexicanos, 1992–2018</span><br>
+            <span class="authors">with Gustavo Gordillo</span>
+            <span class="venue"><em>Economía UNAM</em>, 16(48), 19–54</span>
+          </div>
+        </li>
+        <li>
+          <span class="year">2017</span>
+          <div>
+            <span class="title">Migraciones internas: un análisis espacio-temporal del periodo 1970–2015</span><br>
+            <span class="authors">with Gustavo Gordillo</span>
+            <span class="venue"><em>Economía UNAM</em>, 14(40), 67–100</span>
+          </div>
+        </li>
+      </ul>
+
+      <h3>Working papers</h3>
+      <ul class="dated">
+        <li>
+          <span class="year">2023</span>
+          <div>
+            <span class="title">Mapping Inequality of Opportunity in France and its Regions: A Data-Driven Analysis of Income Inequality from Fiscal Administrative Data</span>
+            <a class="paper-link" href="https://bordeauxeconomicswp.u-bordeaux.fr/2023/2023-12.pdf" target="_blank">PDF</a>
+            <a class="paper-link" href="https://ideas.repec.org/p/grt/bdxewp/2023-12.html" target="_blank">IDEAS</a><br>
+            <span class="authors">with Michaël Sicsic</span>
+            <span class="venue">Bordeaux Economics Working Papers, BxWP2023-12</span>
+          </div>
+        </li>
+        <li>
+          <span class="year">2023</span>
+          <div>
+            <span class="title">Dynamic Clusters and the “Hidden Middle” in Mexico’s Agri-Food Supply Chain: Productive Structure, Territorial Factors, and Wages of Workers and Producers in MSMEs</span><br>
+            <span class="authors">with Isidro Soloaga</span>
+            <span class="venue">RIMISP, INCATA Working Document</span>
+          </div>
+        </li>
+        <li>
+          <span class="year">2022</span>
+          <div>
+            <span class="title">A Random Forest Approach of the Evolution of Inequality of Opportunity in Mexico</span>
+            <a class="paper-link" href="https://www.ecineq.org/2022/06/20/a-random-forest-approach-of-the-evolution-of-inequality-of-opportunity-in-mexico/" target="_blank">ECINEQ</a><br>
+            <span class="authors">with Isidro Soloaga and Pedro Torres</span>
+            <span class="venue">ECINEQ Working Paper Series, 2022-614</span>
+          </div>
+        </li>
+        <li>
+          <span class="year">2022</span>
+          <div>
+            <span class="title">Agri-Food Value Chains in Urban-Rural Areas of Mexico: Case Studies of the Chili Pepper, Milk, Tequila, and Walnut Chains</span><br>
+            <span class="authors">with Isidro Soloaga</span>
+            <span class="venue">Sobre México Working Paper Series, 2022-002</span>
+          </div>
+        </li>
+        <li>
+          <span class="year">2019</span>
+          <div>
+            <span class="title">Movilidad social intergeneracional y desigualdad de oportunidades en México. Educación y activos: un enfoque territorial</span>
+            <a class="paper-link" href="https://ceey.org.mx/movilidad-social-intergeneracional-y-desigualdad-de-oportunidades-en-mexico-educacion-y-activos-un-enfoque-territorial/" target="_blank">CEEY</a>
+            <a class="paper-link" href="https://ideas.repec.org/p/auk/ecosoc/2019_10.html" target="_blank">IDEAS</a><br>
+            <span class="authors">with Gloria Rubio and Isidro Soloaga</span>
+            <span class="venue">Centro de Estudios Espinosa Yglesias (CEEY), Documento de trabajo 07/2019</span>
+          </div>
+        </li>
+      </ul>
+
+      <h3>Book chapters and reports</h3>
+      <ul class="dated">
+        <li>
+          <span class="year">2023</span>
+          <div>
+            <span class="title">Nuevas narrativas para una transformación rural en América Latina y el Caribe: hacia una medición y caracterización renovada de los espacios rurales</span>
+            <a class="paper-link" href="https://repositorio.cepal.org/server/api/core/bitstreams/27f4bef7-e9f0-4d61-8baa-7bd1fdc26675/content" target="_blank">Chapter IV</a><br>
+            <span class="authors">edited by Yannick Gaudin and Ramón Padilla, CEPAL–FIDA</span>
+            <span class="venue">Chapter IV: <em>The rural and the urban in Mexico: a new categorization based on national statistics</em> (with Isidro Soloaga and Moisés Reyes). Chapter V: <em>Measurement and characterization of rural areas based on national statistics: a practical application in Panama</em> (with Isidro Soloaga, Yannick Gaudin, Moisés Reyes and Sara Hess).</span>
+          </div>
+        </li>
+        <li>
+          <span class="year">2019</span>
+          <div>
+            <span class="title">Informe de Movilidad Social en México 2019. Hacia la igualdad regional de oportunidades</span>
+            <a class="paper-link" href="https://ceey.org.mx/informe-de-movilidad-social-mexico-2019/" target="_blank">Report</a><br>
+            <span class="authors">contributor</span>
+            <span class="venue">Centro de Estudios Espinosa Yglesias (CEEY)</span>
+          </div>
+        </li>
+        <li>
+          <span class="year">2014</span>
+          <div>
+            <span class="title">Development of a Protocol for the Compilation of Local Experiences in Adaptation to Climate Change in Productive Systems</span><br>
+            <span class="authors">with Arturo Balderas Torres, Laura Millán Rojas and Tizbe Arteaga Reyes</span>
+            <span class="venue">National Institute of Ecology and Climate Change (INECC), Mexico</span>
+          </div>
+        </li>
+      </ul>
+
+      <h3>Press articles</h3>
+      <ul class="dated">
+        <li>
+          <span class="year">2025</span>
+          <div>
+            <span class="title">Cuando el desarrollo expulsa: de la ciudad recuperada a la ciudad negada</span>
+            <a class="paper-link" href="https://estepais.com/tendencias_y_opiniones/cuando-desarrollo-expulsa-ciudad-recuperada-ciudad-negada/" target="_blank">Article</a><br>
+            <span class="venue"><em>Este País</em>, no. 415, December 2025</span>
+          </div>
+        </li>
+        <li>
+          <span class="year">Forthcoming</span>
+          <div>
+            <span class="title">Mérito con código postal. Aspiraciones altas, oportunidades desiguales</span><br>
+            <span class="venue"><em>Este País</em> (accepted)</span>
+          </div>
+        </li>
+      </ul>
+
+      <h3>Peer review</h3>
+      <p class="inline-list">American Economic Journal: Applied Economics · Journal of Demographic Economics · Sobre México · Humanities and Social Sciences Communications · Estudios Demográficos y Urbanos · Archives of Public Health · Mondes en Développement</p>
+    </section>
+
+    <!-- ================= TALKS ================= -->
+    <section id="talks">
+      <h2>Talks &amp; Conferences</h2>
+      <ul class="dated">
+        <li>
+          <span class="year">Dec 2025</span>
+          <div>
+            <span class="title">Social Mobility into the Middle Classes and the Influence of the Territory</span>
+            <span class="venue">Second WAPLAC Workshop (Welfare and Policies in Latin America and the Caribbean): Dialogues on inequality, wellbeing and structural transformation — Quito, Ecuador</span>
+          </div>
+        </li>
+        <li>
+          <span class="year">Oct 2025</span>
+          <div>
+            <span class="title">Social Mobility into the Middle Classes and the Influence of the Territory</span>
+            <span class="venue">11º Congreso Anual de Economía y Políticas Públicas Sobre México — Mexico City, Mexico</span>
+          </div>
+        </li>
+        <li>
+          <span class="year">Jul 2025</span>
+          <div>
+            <span class="title">Mapping Inequality of Opportunity in France and its Regions</span>
+            <span class="venue">Eleventh ECINEQ Meeting — Washington, D.C., USA</span>
+          </div>
+        </li>
+        <li>
+          <span class="year">Jun 2025</span>
+          <div>
+            <span class="title">Social Mobility and Inequality of Opportunity in Mexico, 2017–2023: How Territory Shapes Life Chances</span>
+            <span class="venue">Second International Conference on Inequalities and Opportunities — Bari, Italy</span>
+          </div>
+        </li>
+        <li>
+          <span class="year">2025</span>
+          <div>
+            <span class="title">Mapping Inequality of Opportunity in France and its Regions</span>
+            <span class="venue">Stone Center on Socio-Economic Inequality, City University of New York — New York City, USA</span>
+          </div>
+        </li>
+        <li>
+          <span class="year">2025</span>
+          <div>
+            <span class="title">Reunited? Post-conflict Attitudes Toward Ex-combatants in Colombia</span>
+            <span class="venue">Bordeaux School of Economics — Bordeaux, France</span>
+          </div>
+        </li>
+        <li>
+          <span class="year">2024</span>
+          <div>
+            <span class="title">Food Prices and Income Poverty in Mexico: Regional Estimates</span>
+            <span class="venue">Sobre México Conference — Mexico City, Mexico</span>
+          </div>
+        </li>
+        <li>
+          <span class="year">2023</span>
+          <div>
+            <span class="title">Bridging the Gap: Aspirations, Expectations, and the Feasibility Gap in Latin America</span>
+            <span class="venue">Sobre México Conference — Mexico City, Mexico</span>
+          </div>
+        </li>
+        <li>
+          <span class="year">2023</span>
+          <div>
+            <span class="title">A Random Forest Approach of Inequality of Opportunity</span>
+            <span class="venue">Tenth ECINEQ Meeting — Aix-en-Provence, France</span>
+          </div>
+        </li>
+        <li>
+          <span class="year">2022</span>
+          <div>
+            <span class="title">A Random Forest Approach of Inequality of Opportunity</span>
+            <span class="venue">Sobre México Conference — Mexico City, Mexico</span>
+          </div>
+        </li>
+        <li>
+          <span class="year">2021</span>
+          <div>
+            <span class="title">Inequality of Opportunity in Mexico and its Regions: A Data-Driven Approach</span>
+            <span class="venue">Ninth ECINEQ Meeting — online</span>
+          </div>
+        </li>
+        <li>
+          <span class="year">2019</span>
+          <div>
+            <span class="title">Aspirations and Expectations of Youth in Chile, Colombia and Mexico</span>
+            <span class="venue">RSA 2019 Latin America Division Conference — Bogotá, Colombia</span>
+          </div>
+        </li>
+        <li>
+          <span class="year">2019</span>
+          <div>
+            <span class="title">Social Mobility and the Territory</span>
+            <span class="venue">International Seminar on Well-being and Territory — Mexico City, Mexico</span>
+          </div>
+        </li>
+        <li>
+          <span class="year">2019</span>
+          <div>
+            <span class="title">Intergenerational Social Mobility and Inequality of Opportunities in Mexico</span>
+            <span class="venue">Sobre México Conference — Mexico City, Mexico</span>
+          </div>
+        </li>
+        <li>
+          <span class="year">2018</span>
+          <div>
+            <span class="title">Intergenerational Mobility in Rural-Urban Territories: The Case of Chile, Colombia and Mexico</span>
+            <span class="venue">HDCA 2018 Conference — Buenos Aires, Argentina</span>
+          </div>
+        </li>
+        <li>
+          <span class="year">2017</span>
+          <div>
+            <span class="title">What Governability for the Mexican Countryside?</span>
+            <span class="venue">IASC Conference: Practicing the Commons — Utrecht, Netherlands</span>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- ================= TEACHING ================= -->
+    <section id="teaching">
+      <h2>Teaching</h2>
+      <ul class="dated">
+        <li>
+          <span class="year">2022–2024</span>
+          <div>
+            <span class="title">Statistics</span> — Teaching Assistant
+            <span class="venue">University of Bordeaux, Bordeaux School of Economics</span>
+          </div>
+        </li>
+        <li>
+          <span class="year">2021–2022</span>
+          <div>
+            <span class="title">Statistics and Econometrics</span> — Teaching Assistant to Isidro Soloaga
+            <span class="venue">Universidad Iberoamericana, Mexico City</span>
+          </div>
+        </li>
+        <li>
+          <span class="year">2016–2017</span>
+          <div>
+            <span class="title">Rural Economics</span> — Teaching Assistant to Gustavo Gordillo
+            <span class="venue">National Autonomous University of Mexico (UNAM), Mexico City</span>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- ================= EXPERIENCE ================= -->
+    <section id="experience">
+      <h2>Experience &amp; Education</h2>
+
+      <h3>Professional experience</h3>
+      <ul class="dated">
+        <li>
+          <span class="year">2017–2022</span>
+          <div>
+            <span class="title">Researcher, Research Chair on Territorial Dynamics and Well-being</span>
+            <span class="venue">Universidad Iberoamericana, Mexico City</span>
+            <ul class="compact" style="margin-top:0.4rem">
+              <li>Responsible for household surveys, including the 2018 Survey on Territories and Well-being (4,000 households)</li>
+              <li>CEPAL–FIDA project on the <a href="https://repositorio.cepal.org/server/api/core/bitstreams/27f4bef7-e9f0-4d61-8baa-7bd1fdc26675/content" target="_blank">characterization of rural spaces</a></li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <span class="year">2014–2017</span>
+          <div>
+            <span class="title">Department Head, Design of Instruments for the Study of Poverty</span>
+            <span class="venue">National Council for the Evaluation of Social Development Policy (CONEVAL), Mexico City</span>
+            <ul class="compact" style="margin-top:0.4rem">
+              <li>Indicators and measurement of multidimensional poverty</li>
+              <li>Development of a gender indicators system: <em>Pobreza y género en México: hacia un sistema de indicadores</em> (CONEVAL, 2016)</li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <span class="year">2014–</span>
+          <div>
+            <span class="title">Consultant</span>
+            <ul class="compact" style="margin-top:0.4rem">
+              <li>RIMISP, Latin American Center for Rural Development: Transforming Territories programme</li>
+              <li>National Institute of Ecology and Climate Change (INECC): protocol for compiling local experiences of adaptation to climate change in productive systems</li>
+              <li>CIRAD: SELINA and PESMIX projects on payments for environmental services</li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+
+      <h3>Education</h3>
+      <ul class="dated">
+        <li>
+          <span class="year">2022–</span>
+          <div>
+            <span class="title">PhD in Development Economics</span>
+            <span class="venue">Bordeaux School of Economics, University of Bordeaux (HOPE project). Supervisors: Matthieu Clément and Éric Rougier</span>
+          </div>
+        </li>
+        <li>
+          <span class="year">2025</span>
+          <div>
+            <span class="title">Fulbright Visiting Scholar</span>
+            <span class="venue">Stone Center on Socio-Economic Inequality, City University of New York (CUNY)</span>
+          </div>
+        </li>
+        <li>
+          <span class="year">2013–2014</span>
+          <div>
+            <span class="title">M.Sc. in Sustainable Development Economics</span>
+            <span class="venue">CERDI, Université d'Auvergne, Clermont-Ferrand</span>
+          </div>
+        </li>
+        <li>
+          <span class="year">2009–2011</span>
+          <div>
+            <span class="title">M.Sc. in Development Economics</span>
+            <span class="venue">Université Montesquieu Bordeaux IV (exchange semester at CIDE, Mexico City)</span>
+          </div>
+        </li>
+      </ul>
+
+      <h3>Skills</h3>
+      <div class="two-col">
+        <div>
+          <p><strong>Programming:</strong> R, Stata, Python<br>
+          <strong>Survey software (CAPI):</strong> Survey Solutions, SurveyCTO<br>
+          <strong>Tools:</strong> LaTeX, QGIS, SPAD</p>
+        </div>
+        <div>
+          <p><strong>Languages:</strong> French (native), Spanish (fluent), English (fluent)</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CONTACT ================= -->
+    <section id="contact">
+      <h2>Contact</h2>
+      <div class="two-col">
+        <dl class="contact">
+          <dt>Email</dt>
+          <dd><a href="mailto:thibaut.plassot-sansans@u-bordeaux.fr">thibaut.plassot-sansans@u-bordeaux.fr</a><br>
+              <a href="mailto:thiplass@gmail.com">thiplass@gmail.com</a></dd>
+          <dt>Profiles</dt>
+          <dd>
+            <a href="https://scholar.google.com/citations?user=swcCBwgAAAAJ" target="_blank">Google Scholar</a> ·
+            <a href="https://orcid.org/0000-0002-5652-3279" target="_blank">ORCID</a> ·
+            <a href="https://www.researchgate.net/profile/Thibaut-Plassot" target="_blank">ResearchGate</a> ·
+            <a href="https://www.bse.u-bordeaux.fr/membres/plassot-sansans-thibaut/" target="_blank">BSE page</a>
+          </dd>
+        </dl>
+        <dl class="contact">
+          <dt>Office</dt>
+          <dd>Bordeaux School of Economics (BxSE)<br>
+              Université de Bordeaux<br>
+              Avenue Léon Duguit, Bât. H2, office H2-205<br>
+              33608 Pessac Cedex, France</dd>
+        </dl>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © Thibaut Plassot Sansans · Last updated September 2026
+  </footer>
+
+  <script>
+    (function () {
+      var toggle = document.getElementById('menuToggle');
+      var links = document.getElementById('navLinks');
+      toggle.addEventListener('click', function () {
+        var open = links.classList.toggle('open');
+        toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+      links.querySelectorAll('a').forEach(function (a) {
+        a.addEventListener('click', function () {
+          links.classList.remove('open');
+          toggle.setAttribute('aria-expanded', 'false');
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
