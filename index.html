@@ -214,7 +214,7 @@
     li { margin-bottom: 0.85rem; }
 
     ul.dated { list-style: none; padding-left: 0; }
-    ul.dated li {
+    ul.dated > li {
       display: grid;
       grid-template-columns: 5.2rem 1fr;
       gap: 0.75rem;
@@ -250,6 +250,16 @@
     .paper-link:hover { background: var(--chip-hover); text-decoration: none; }
 
     .compact li { margin-bottom: 0.5rem; }
+
+    /* nested bullet list inside a dated entry */
+    ul.sub {
+      list-style: disc;
+      padding-left: 1.1rem;
+      margin: 0.45rem 0 0;
+      font-size: 0.93rem;
+    }
+    ul.sub li { margin-bottom: 0.25rem; }
+    ul.sub li::marker { color: var(--muted); }
     .inline-list { color: var(--text); }
 
     .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
@@ -281,7 +291,7 @@
       .menu-toggle { display: block; }
       #home { padding: 1.5rem; gap: 1.5rem; }
       #home .photo { flex: 1 1 100%; }
-      ul.dated li { grid-template-columns: 1fr; gap: 0.1rem; }
+      ul.dated > li { grid-template-columns: 1fr; gap: 0.1rem; }
       .two-col { grid-template-columns: 1fr; }
     }
 
@@ -692,7 +702,7 @@
           <div>
             <span class="title">Researcher, Research Chair on Territorial Dynamics and Well-being</span>
             <span class="venue">Universidad Iberoamericana, Mexico City</span>
-            <ul class="compact" style="margin-top:0.4rem">
+            <ul class="sub">
               <li>Responsible for household surveys, including the 2018 Survey on Territories and Well-being (4,000 households)</li>
               <li>CEPAL–FIDA project on the <a href="https://repositorio.cepal.org/server/api/core/bitstreams/27f4bef7-e9f0-4d61-8baa-7bd1fdc26675/content" target="_blank">characterization of rural spaces</a></li>
             </ul>
@@ -703,7 +713,7 @@
           <div>
             <span class="title">Department Head, Design of Instruments for the Study of Poverty</span>
             <span class="venue">National Council for the Evaluation of Social Development Policy (CONEVAL), Mexico City</span>
-            <ul class="compact" style="margin-top:0.4rem">
+            <ul class="sub">
               <li>Indicators and measurement of multidimensional poverty</li>
               <li>Development of a gender indicators system: <em>Pobreza y género en México: hacia un sistema de indicadores</em> (CONEVAL, 2016)</li>
             </ul>
@@ -713,7 +723,7 @@
           <span class="year">2014–</span>
           <div>
             <span class="title">Consultant</span>
-            <ul class="compact" style="margin-top:0.4rem">
+            <ul class="sub">
               <li>RIMISP, Latin American Center for Rural Development: Transforming Territories programme</li>
               <li>National Institute of Ecology and Climate Change (INECC): protocol for compiling local experiences of adaptation to climate change in productive systems</li>
               <li>CIRAD: SELINA and PESMIX projects on payments for environmental services</li>
