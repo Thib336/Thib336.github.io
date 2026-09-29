@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://thib336.github.io/sitemap.xml
